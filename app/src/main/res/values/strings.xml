@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Doggy Zone</string>
+    <string name="logo_welcome">Welcome to Doggy Zone</string>
+    <string name="sign_in_here">Please sign in to proceed</string>
+    <string name="email_hint">Enter your email here...</string>
+    <string name="password_hint">Enter your password here...</string>
+    <string name="login_button_text"><b>Login</b></string>
+    <string name="forgot_password">Have you forgotten your password?</string>
+    <string name="register">Are you a new user? <b>Register here!</b></string>
+    <string name="maps_logo">Doggy Zone Maps</string>
+    <string name="maps_find_button">Search</string>
+    <string name="google_maps_api_key">AIzaSyCig9wYwsVEKXGv40BD13fwlRiOg8GIsek</string>
+</resources>

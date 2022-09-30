@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/bottom_highlight_bar.xml" value="0.163" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/button_custom.xml" value="0.163" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/custom_navbar_selector.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/custom_navbar_shape.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/edit_text_custom.xml" value="0.226" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_arrow_drop_down_custom_grey.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_email_blue.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_email_grey.xml" value="0.163" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_home_custom_white.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_lock_open_blue.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_lock_open_grey.xml" value="0.163" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_map_custom_white.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_person_custom_white.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_visibility_blue.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_visibility_grey.xml" value="0.163" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_login_main.xml" value="0.264" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_map.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/menu/custom_menu_nav.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/xml/splash_screen_animation.xml" value="0.253125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

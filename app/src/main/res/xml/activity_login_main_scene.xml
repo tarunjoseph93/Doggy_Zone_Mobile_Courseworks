@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2500"
+        motion:autoTransition="animateToEnd">
+       <KeyFrameSet>
+           <KeyPosition
+               motion:motionTarget="@+id/main_logo"
+               motion:framePosition="15"
+               motion:keyPositionType="deltaRelative"
+               motion:percentX="0"
+               motion:percentY="0" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="250dp"
+            android:layout_width="250dp"
+            android:id="@+id/main_logo"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/login_linearlayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/main_logo"
+            android:alpha="0"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/highlight_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+</MotionScene>
