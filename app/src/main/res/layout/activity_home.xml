@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,18 +8,222 @@
     android:background="@color/custom_white_background"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="This is the Home Screen"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <RelativeLayout
+        android:id="@+id/top_highlight_bar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/top_highlight_bar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/home_page_logo"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/home_page_logo"
+            android:textColor="@color/custom_white_background"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_page_logo"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/home_display_pic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_baseline_person_outline_no_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dog_name_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/home_display_pic"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/dog_name_placeholder"
+                    android:textAlignment="center"
+                    android:textColor="@color/custom_white_background"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dog_name_heading"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@id/home_display_pic">
+
+                    <TableRow android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/dogAgeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/dog_age_label"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/dogAgeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/not_available"
+                            android:textAlignment="center"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/dogBreedLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/dog_breed_label"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/dogBreedTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/not_available"
+                            android:textAlignment="center"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/dogColorLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/dog_color_label"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/dogColorTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/not_available"
+                            android:textAlignment="center"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/ownerLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/owner_name_label"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/ownerTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            android:text="@string/not_available"
+                            android:textAlignment="center"
+                            android:textColor="@color/custom_white_background"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/events_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_highlight_bar"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_custom"
+            android:minHeight="50dp"
+            android:text="@string/add_event_button_text"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_white_background"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/events_linear_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/home_page_custom_rows"/>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navbar"
@@ -34,4 +238,4 @@
         app:menu="@menu/custom_menu_nav"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

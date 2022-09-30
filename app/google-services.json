@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1024041411288",
+    "project_id": "doggy-zone",
+    "storage_bucket": "doggy-zone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024041411288:android:ad3a420cf10714839b2dad",
+        "android_client_info": {
+          "package_name": "com.example.doggyzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024041411288-72rg3j1brk388d1d5pkrqhscl97831tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANSIxQNn8BHvohWJdqa9VxwJi4TR-D-lY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024041411288-72rg3j1brk388d1d5pkrqhscl97831tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
