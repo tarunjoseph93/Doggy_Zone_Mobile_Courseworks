@@ -2,8 +2,15 @@
     <string name="app_name">Doggy Zone</string>
     <string name="logo_welcome">Welcome to Doggy Zone</string>
     <string name="sign_in_here">Please sign in to proceed</string>
-    <string name="email_hint">Enter your email here...</string>
-    <string name="password_hint">Enter your password here...</string>
+    <string name="register_here">Please register details of your dog here. \nOwner details welcome.</string>
+    <string name="register_button"><b>Register</b></string>
+    <string name="email_hint">Enter your email here…</string>
+    <string name="password_hint">Enter your password here…</string>
+    <string name="confirm_password">Confirm your password here…</string>
+    <string name="register_dog_name">Enter your dogs name here…</string>
+    <string name="register_dog_age">Enter your dogs age here…</string>
+    <string name="register_dog_breed">Enter your dogs breed here…</string>
+    <string name="register_dog_color">Enter your dogs color here…</string>
     <string name="login_button_text"><b>Login</b></string>
     <string name="forgot_password">Have you forgotten your password?</string>
     <string name="register">Are you a new user? <b>Register here!</b></string>

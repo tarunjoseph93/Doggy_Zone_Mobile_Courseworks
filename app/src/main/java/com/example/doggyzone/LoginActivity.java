@@ -9,12 +9,14 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
     EditText userEmail, userPassword;
     Button login_Button;
+    TextView registerUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,14 @@ public class LoginActivity extends AppCompatActivity {
         userEmail = (EditText) findViewById(R.id.email_edittext);
         userPassword = (EditText) findViewById(R.id.password_edittext);
         login_Button = (Button) findViewById(R.id.login_button);
+        registerUser = findViewById(R.id.register_text_view);
+
+        registerUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
+            }
+        });
 
         login_Button.setOnClickListener(new View.OnClickListener() {
             @Override

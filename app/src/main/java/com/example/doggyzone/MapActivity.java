@@ -31,6 +31,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -75,8 +76,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         BottomNavigationView btmNavView = findViewById(R.id.bottom_navbar);
         btmNavView.setSelectedItemId(R.id.menu_map);
 
-        String[] typeList = {"veterinary_care", "cafe", "restaurant", "bar"};
-        String[] nameList = {"Vet Clinics", "Dog-Friendly Cafes", "Dog-Friendly Restaurants", "Dog-Friendly Bars"};
+        String[] nameList = {"Vet Clinics", "Dog Stores", "Dog-Friendly Cafes", "Dog-Friendly Restaurants", "Dog-Friendly Bars"};
 
         searchSpinner.setAdapter(new ArrayAdapter<>(
                 getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, nameList));
@@ -121,6 +121,24 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                         Object getData[] = new Object[2];
                         getData[0] = gMap;
                         getData[1] = cafeURL;
+
+                        GetData fetchData = new GetData();
+                        fetchData.execute(getData);
+                    }
+                    else if(Objects.equals(nameList[a], "Dog Stores")) {
+
+                        StringBuilder sb = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
+                        sb.append("keyword=dog");
+                        sb.append("&location=" + currentLatitude + "," + currentLongitude);
+                        sb.append("&radius=3000");
+                        sb.append("&type=store");
+                        sb.append("&sensor=true");
+                        sb.append("&key=" + getResources().getString(R.string.google_maps_api_key));
+
+                        String storeURL = sb.toString();
+                        Object getData[] = new Object[2];
+                        getData[0] = gMap;
+                        getData[1] = storeURL;
 
                         GetData fetchData = new GetData();
                         fetchData.execute(getData);

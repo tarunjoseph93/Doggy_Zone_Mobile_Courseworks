@@ -2,8 +2,11 @@ package com.example.doggyzone.map_functions;
 
 import android.os.AsyncTask;
 
+import com.example.doggyzone.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -55,6 +58,7 @@ public class GetData extends AsyncTask<Object, String, String> {
                 MarkerOptions mOpts = new MarkerOptions();
                 mOpts.title(name);
                 mOpts.position(latLng);
+                mOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
                 gMap.addMarker(mOpts);
                 gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14));
             }
