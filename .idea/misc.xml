@@ -10,9 +10,12 @@
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/custom_navbar_shape.xml" value="0.184" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/edit_text_custom.xml" value="0.226" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_add_circle_outline_custom_blue.xml" value="0.2225" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_arrow_drop_down_custom_blue.xml" value="0.207" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_arrow_drop_down_custom_grey.xml" value="0.184" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_attach_file_attachment_white.xml" value="0.207" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_chevron_left_custom_blue.xml" value="0.179" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_edit_custom_blue.xml" value="0.207" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_edit_location_custom_blue.xml" value="0.207" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_email_blue.xml" value="0.184" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_email_grey.xml" value="0.163" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/ic_baseline_face_custom_blue.xml" value="0.211" />
@@ -27,7 +30,8 @@
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/pdf_add_shape.xml" value="0.207" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/profile_pic_circle_shape.xml" value="0.2225" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/drawable/top_highlight_bar.xml" value="0.207" />
-        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_add_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_login_main.xml" value="0.264" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -38,6 +42,7 @@
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/layout/home_page_custom_rows.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/menu/custom_menu_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/tarun/AndroidStudioProjects/DoggyZone/app/src/main/res/xml/splash_screen_animation.xml" value="0.253125" />
+        <entry key="..\:/Users/tarun/AppData/Local/Android/Sdk/platforms/android-32/data/res/drawable/spinner_background.xml" value="0.1915" />
       </map>
     </option>
   </component>

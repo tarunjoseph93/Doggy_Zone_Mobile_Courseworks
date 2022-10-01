@@ -61,6 +61,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     FusedLocationProviderClient fLPC;
     double currentLatitude = 0, currentLongitude = 0;
 
+    String[] nameList = {"Vet Clinics", "Dog Stores", "Dog-Friendly Cafes", "Dog-Friendly Restaurants", "Dog-Friendly Bars"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,8 +77,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         BottomNavigationView btmNavView = findViewById(R.id.bottom_navbar);
         btmNavView.setSelectedItemId(R.id.menu_map);
-
-        String[] nameList = {"Vet Clinics", "Dog Stores", "Dog-Friendly Cafes", "Dog-Friendly Restaurants", "Dog-Friendly Bars"};
 
         searchSpinner.setAdapter(new ArrayAdapter<>(
                 getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, nameList));

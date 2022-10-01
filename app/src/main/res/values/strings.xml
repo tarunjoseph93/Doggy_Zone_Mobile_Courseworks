@@ -26,6 +26,18 @@
     <string name="dog_breed_label">Breed: </string>
     <string name="dog_color_label">Color: </string>
     <string name="owner_name_label">Owner: </string>
-    <string name="add_event_button_text">Add Event</string>
+    <string name="add_event_button_text">Add Appointment</string>
     <string name="event_details">Event details go here</string>
+    <string name="add_event_welcome_label">Add Appointment</string>
+    <string name="add_event_desc_label">Add the title, location, description, date and time for an appointment:</string>
+    <string name="add_event_title_hint">Add a title for your appointment…</string>
+    <string name="add_event_desc_hint">Add a description for your appointment…</string>
+    <string name="add_event_location_hint">Add a location for your appointment…</string>
+    <string name="add_event_all_day_label">All day:</string>
+    <string name="add_event_start_time_label">Start Time:</string>
+    <string name="add_event_end_time_label">End Time:</string>
+    <string name="hour_label">HH</string>
+    <string name="minute_label">MM</string>
+    <string name="add_event_day_hint">AM/PM</string>
+
 </resources>
