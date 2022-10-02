@@ -202,62 +202,95 @@ public class RegisterActivity extends AppCompatActivity {
         String userId = firebaseAuth.getUid();
         HashMap<String, Object> hashMap = new HashMap<>();
 
-        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
-        StorageReference storageReference = firebaseStorage.getReference(dogNameString + "-" + userId);
+        if(imageFilePath != null) {
+            FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
+            StorageReference storageReference = firebaseStorage.getReference(dogNameString + "-" + userId);
 
-        storageReference.putFile(imageFilePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                    @Override
-                    public void onSuccess(Uri uri) {
+            storageReference.putFile(imageFilePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
 
-                        String dogImageUri = uri.toString();
+                                    String dogImageUri = uri.toString();
 
-                        hashMap.put("uid", userId);
-                        hashMap.put("fname", fNameString);
-                        hashMap.put("lname", lNameString);
-                        hashMap.put("email", emailString);
-                        hashMap.put("dog_name", dogNameString);
-                        hashMap.put("dog_age", dogAgeString);
-                        hashMap.put("dog_breed", dogBreedString);
-                        hashMap.put("dog_color", dogColorString);
-                        if(!dogImageUri.isEmpty()) {
-                            hashMap.put("dog_image", dogImageUri);
-                        }
-                        else
-                        {
-                            hashMap.put("dog_image", "");
-                        }
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
-                                .getReference("Users");
-
-                        databaseReference.child(userId).setValue(hashMap)
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        progressDialog.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "Account created!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                                        finish();
+                                    hashMap.put("uid", userId);
+                                    hashMap.put("fname", fNameString);
+                                    hashMap.put("lname", lNameString);
+                                    hashMap.put("email", emailString);
+                                    hashMap.put("dog_name", dogNameString);
+                                    hashMap.put("dog_age", dogAgeString);
+                                    hashMap.put("dog_breed", dogBreedString);
+                                    hashMap.put("dog_color", dogColorString);
+                                    if(!dogImageUri.isEmpty()) {
+                                        hashMap.put("dog_image", dogImageUri);
                                     }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        progressDialog.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    else
+                                    {
+                                        hashMap.put("dog_image", "");
                                     }
-                                });
-                    }
-                });
-            }
-        })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-                        float percent = (100*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-                        progressDialog.setMessage("Uploaded: " + (int)percent + "%");
-                    }
-                });
+                                    DatabaseReference databaseReference = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
+                                            .getReference("Users");
+
+                                    databaseReference.child(userId).setValue(hashMap)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    progressDialog.dismiss();
+                                                    Toast.makeText(RegisterActivity.this, "Account created!", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                                    finish();
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    progressDialog.dismiss();
+                                                    Toast.makeText(RegisterActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+                            });
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                            float percent = (100*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
+                            progressDialog.setMessage("Uploaded: " + (int)percent + "%");
+                        }
+                    });
+        }
+        else {
+            hashMap.put("uid", userId);
+            hashMap.put("fname", fNameString);
+            hashMap.put("lname", lNameString);
+            hashMap.put("email", emailString);
+            hashMap.put("dog_name", dogNameString);
+            hashMap.put("dog_age", dogAgeString);
+            hashMap.put("dog_breed", dogBreedString);
+            hashMap.put("dog_color", dogColorString);
+            hashMap.put("dog_image", "");
+
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
+                    .getReference("Users");
+
+            databaseReference.child(userId).setValue(hashMap)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            progressDialog.dismiss();
+                            Toast.makeText(RegisterActivity.this, "Account created without profile picture!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                            finish();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(RegisterActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
     }
 }
