@@ -39,5 +39,10 @@
     <string name="hour_label">HH</string>
     <string name="minute_label">MM</string>
     <string name="add_event_day_hint">AM/PM</string>
+    <string name="edit_profile_button">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="save_button">Save</string>
+    <string name="edit_profile_welcome_logo">Edit your profile</string>
+    <string name="edit_profile_description">Edit your dogs details below:</string>
 
 </resources>

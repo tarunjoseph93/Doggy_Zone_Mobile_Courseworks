@@ -30,9 +30,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     public static final String REALTIME_DATABASE_URL = "https://doggy-zone-default-rtdb.firebaseio.com/";
-    String userId = "";
 
-    String dogName = "", dogAge = "", dogBreed = "", dogColor = "", dogOwner = "", dogPic = "";
+    String userId = "", dogName = "", dogAge = "", dogBreed = "", dogColor = "", dogOwner = "", dogPic = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
