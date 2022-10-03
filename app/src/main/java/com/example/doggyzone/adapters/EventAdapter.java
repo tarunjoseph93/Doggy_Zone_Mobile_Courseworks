@@ -47,7 +47,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         endHour = eventMod.end_hour;
         endMinute = eventMod.end_minute;
 
-        String date = day + ":" + month + ":" + year;
+        String date = day + "/" + month + "/" + year;
         String startTime = startHour + ":" + startMinute;
         String endTime = endHour + ":" + endMinute;
 

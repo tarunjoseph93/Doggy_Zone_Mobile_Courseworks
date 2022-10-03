@@ -239,7 +239,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         LocationCallback locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(@NonNull LocationResult locationResult) {
-                Toast.makeText(getApplicationContext(), "Location Result: " + locationResult, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Location Result: " + locationResult, Toast.LENGTH_SHORT).show();
 
                 if(locationResult == null) {
                     Toast.makeText(getApplicationContext(), "Location Result is Null!", Toast.LENGTH_SHORT).show();
@@ -248,8 +248,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
                 for(Location location:locationResult.getLocations()) {
                     if(location != null) {
-                        Toast.makeText(getApplicationContext(), "Current Latitude: " + location.getLatitude() +
-                                "\nCurrent Longitude: " + location.getLongitude(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), "Current Latitude: " + location.getLatitude() +
+//                                "\nCurrent Longitude: " + location.getLongitude(), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
