@@ -102,36 +102,14 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         eventList.clear();
-
-//                        String eventTitle = "" + dataSnapshot.child("event_title").getValue();
-//
-//                        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
-//                                .getReference("Events");
-//                        databaseReference1.child(userId).child(eventTitle)
-//                                .addListenerForSingleValueEvent(new ValueEventListener() {
-//                                    @Override
-//                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot1) {
-//
-//                                    }
-//
-//                                    @Override
-//                                    public void onCancelled(@NonNull DatabaseError databaseError1) {
-//
-//                                    }
-//                                });
-
-
                         for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                             EventModel eventMod = dataSnapshot1.getValue(EventModel.class);
                             eventList.add(eventMod);
                         }
-                        // Adapter code goes here
-
                         layoutManager = new LinearLayoutManager(HomeActivity.this);
                         eventsRV.setLayoutManager(layoutManager);
                         mAdapter = new EventAdapter(eventList, HomeActivity.this);
                         eventsRV.setAdapter(mAdapter);
-
                     }
 
                     @Override
@@ -139,7 +117,6 @@ public class HomeActivity extends AppCompatActivity {
 
                     }
                 });
-
     }
 
     private void userUISetup() {

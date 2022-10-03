@@ -272,7 +272,7 @@
                 android:id="@+id/add_event_date_picker_txtInpLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/custom_blue"
+                android:background="@color/light_grey"
                 android:layout_below="@+id/add_event_end_time_txtInpLayout"
                 android:layout_marginTop="10dp">
 

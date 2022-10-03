@@ -50,5 +50,13 @@
     <string name="event_all_day_options">Yes or no</string>
     <string name="event_date">DDMMYYYY</string>
     <string name="event_time">HHMM</string>
+    <string name="add_to_event">Add to Event</string>
+    <string name="marker_page_welcome">Marker Page</string>
+    <string name="marker_page_name_label">Name:</string>
+    <string name="marker_page_open_now">Open Now:</string>
+    <string name="marker_page_address_label">Address:</string>
+    <string name="marker_page_rating">Rating:</string>
+    <string name="marker_page_user_ratings">Total User Ratings:</string>
+    <string name="marker_page_welcome_description">View this location details:</string>
 
 </resources>
