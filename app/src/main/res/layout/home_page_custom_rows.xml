@@ -1,38 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:contentPadding="10dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="0dp"
     app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="@color/custom_blue">
+    app:cardBackgroundColor="@color/custom_white_background"
+    app:strokeColor="@color/custom_blue"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/catData"
-            android:layout_width="0dp"
+            android:id="@+id/event_title_custom_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_title"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/event_description_custom_row"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/event_details"
             android:fontFamily="sans-serif"
-            android:textColor="@color/custom_white_background"
+            android:textColor="@color/black"
             android:layout_weight="1"
-            android:textSize="20sp"/>
+            android:textAlignment="center"
+            android:textSize="18sp"/>
 
-        <ImageButton
-            android:id="@+id/catDelBtn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_baseline_attach_file_attachment_white"
-            android:background="@drawable/pdf_add_shape"/>
+        <TextView
+            android:id="@+id/event_location_custom_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_location"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_title_custom_row"
+                tools:ignore="NotSibling">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/event_all_day_label_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_event_all_day_label"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/event_all_day_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_all_day_options"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="14sp"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/event_date_label_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_date_label"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/event_date_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_date"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/event_start_time_label_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_event_start_time_label"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/event_start_time_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_time"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/event_end_time_label_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_event_end_time_label"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/event_end_time_custom_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event_time"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

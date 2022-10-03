@@ -44,5 +44,11 @@
     <string name="save_button">Save</string>
     <string name="edit_profile_welcome_logo">Edit your profile</string>
     <string name="edit_profile_description">Edit your dogs details below:</string>
+    <string name="event_title">Event Title</string>
+    <string name="event_location">Event Location</string>
+    <string name="event_date_label">Date:</string>
+    <string name="event_all_day_options">Yes or no</string>
+    <string name="event_date">DDMMYYYY</string>
+    <string name="event_time">HHMM</string>
 
 </resources>

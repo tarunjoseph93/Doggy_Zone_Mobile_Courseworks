@@ -2,6 +2,8 @@ package com.example.doggyzone;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,7 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.doggyzone.adapters.EventAdapter;
 import com.example.doggyzone.functions.ImageLoadASyncTask;
+import com.example.doggyzone.models.EventModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,12 +26,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class HomeActivity extends AppCompatActivity {
 
     Button addEventButton;
     TextView dogNameTV, dogAgeTV, dogBreedTV, dogColorTV, dogOwnerTV;
     ImageView displayPicture;
+    RecyclerView eventsRV;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager layoutManager;
 
+    private ArrayList<EventModel> eventList;
     private FirebaseAuth firebaseAuth;
     public static final String REALTIME_DATABASE_URL = "https://doggy-zone-default-rtdb.firebaseio.com/";
 
@@ -49,8 +59,10 @@ public class HomeActivity extends AppCompatActivity {
         dogColorTV = findViewById(R.id.dogColorTextView);
         dogOwnerTV = findViewById(R.id.ownerTextView);
         displayPicture = findViewById(R.id.home_display_pic);
+        eventsRV = findViewById(R.id.home_recycler_view);
 
         userUISetup();
+        loadAllEvents();
 
         addEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +89,57 @@ public class HomeActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private void loadAllEvents() {
+        eventList = new ArrayList<>();
+        userId = firebaseAuth.getUid();
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
+                .getReference("Events");
+        databaseReference.child(userId)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        eventList.clear();
+
+//                        String eventTitle = "" + dataSnapshot.child("event_title").getValue();
+//
+//                        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance(REALTIME_DATABASE_URL)
+//                                .getReference("Events");
+//                        databaseReference1.child(userId).child(eventTitle)
+//                                .addListenerForSingleValueEvent(new ValueEventListener() {
+//                                    @Override
+//                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot1) {
+//
+//                                    }
+//
+//                                    @Override
+//                                    public void onCancelled(@NonNull DatabaseError databaseError1) {
+//
+//                                    }
+//                                });
+
+
+                        for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                            EventModel eventMod = dataSnapshot1.getValue(EventModel.class);
+                            eventList.add(eventMod);
+                        }
+                        // Adapter code goes here
+
+                        layoutManager = new LinearLayoutManager(HomeActivity.this);
+                        eventsRV.setLayoutManager(layoutManager);
+                        mAdapter = new EventAdapter(eventList, HomeActivity.this);
+                        eventsRV.setAdapter(mAdapter);
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
     }
 
     private void userUISetup() {
